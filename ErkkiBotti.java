@@ -17,7 +17,7 @@ public class ErkkiBotti extends PircBot {
     public ErkkiBotti() {
     	
     	this.moduulit = new HashSet<BottiModuuli>();
-        this.setName("Vilperi");
+        this.setName("Erkki");
         
         this.moduulit.add(new MalliModuuli(this));
     }
@@ -27,13 +27,13 @@ public class ErkkiBotti extends PircBot {
      * @param @see PircBot dokumentaatio.
      */
     public void onMessage(String channel, String sender,
-                       String login, String hostname, String message) {
+                       String login, String hostname, String message)
+    {
     	
-    	Iterator<BottiModuuli> modIter = moduulit.iterator();
-    	while (modIter.hasNext()) {
-    		BottiModuuli m = modIter.next();
-    		m.viesti(channel, sender, login, hostname, message);
+    	for (BottiModuuli mod : moduulit) {
+    		mod.viesti(channel, sender, login, hostname, message);
     	}
+
     } // end of onMessage;
     
     /**
