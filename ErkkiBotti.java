@@ -20,6 +20,7 @@ public class ErkkiBotti extends PircBot {
         this.setName("Erkki");
         
         this.moduulit.add(new MalliModuuli(this));
+        this.moduulit.add(new ReseptiModuuli(this));
     }
     
     /**
