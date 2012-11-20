@@ -1,0 +1,9 @@
+﻿Työnjako:
+
+
+Masa & Olli: fasilitoiniti
+
+Mikko & Atro: Arvaa ASCII
+
+Eeva ja Lauri: Voit pyytää botilta ruokareseptin
+
