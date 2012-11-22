@@ -25,7 +25,11 @@ public class Kuvavisa extends BottiModuuli {
 	
 	public void aloitaArvuuttelu(){
 		
-		int arpa = rand.nextInt(this.kuvapankki.size());
+		//if (kuvapankki != null){
+			
+		//}
+		//int arpa = rand.nextInt(this.kuvapankki.size());
+		int arpa = 0;
 		String kuvanNimi = kuvapankki.get(arpa);
 		Kuva kuva = lueKuva(kuvanNimi);
 		kuva.arvuutaKuva();
@@ -56,6 +60,7 @@ public class Kuvavisa extends BottiModuuli {
 		
 		this.viimeisinViesti = viesti;
 		if (viesti.equalsIgnoreCase("kuvavisa")){
+			System.out.println("aloitetaan arvuuttelu");
 			aloitaArvuuttelu();
 			
 		}
