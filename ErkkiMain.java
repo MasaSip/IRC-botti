@@ -11,10 +11,10 @@ public class ErkkiMain {
         bot.setVerbose(true);
       
         // Connect to the IRC server.
-        bot.connect("irc.cs.hut.fi");
+        bot.connect(ErkkiBotti.server);
 
         // Join the #pircbot channel.
-        bot.joinChannel("!pahaolo");
+        bot.joinChannel(ErkkiBotti.kanava);
     }
     
 }

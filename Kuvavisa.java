@@ -48,7 +48,7 @@ public class Kuvavisa extends BottiModuuli {
 	}*/
 	
 	public void printtaaPisteet(String kanava){
-		botti.lahetaViesti(kanava, "Sori, taa ei toimi viela.");
+		botti.lahetaViesti(ErkkiBotti.kanava, "Sori, taa ei toimi viela.");
 	}
 	
 	public String annaViimeisinViesti(){
