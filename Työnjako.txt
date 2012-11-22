@@ -7,3 +7,4 @@ Mikko & Atro: Arvaa ASCII
 
 Eeva ja Lauri: Voit pyytää botilta ruokareseptin
 
+Ilona ja Henni: Mietelauseet (pyydettäessä botti antaa satunnaisen mietelauseen)
