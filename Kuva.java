@@ -69,7 +69,7 @@ public class Kuva  implements Runnable{
 			for (int i = 0; i < riveja.size(); i++){
 
 
-				visailu.botti.lahetaViesti("#pahaolo",  rivi.printtaa());
+				visailu.botti.lahetaViesti("!pahaolo",  rivi.printtaa());
 			}
 		}
 

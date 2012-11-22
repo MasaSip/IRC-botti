@@ -9,12 +9,12 @@ public class ErkkiMain {
         
         // Enable debugging output.
         bot.setVerbose(true);
-        
+      
         // Connect to the IRC server.
-        bot.connect("irc.freenode.net");
+        bot.connect("irc.cs.hut.fi");
 
         // Join the #pircbot channel.
-        bot.joinChannel("#pahaolo2");
+        bot.joinChannel("!pahaolo");
     }
     
 }

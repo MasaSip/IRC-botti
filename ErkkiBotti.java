@@ -11,16 +11,18 @@ import org.jibble.pircbot.*;
  */
 
 public class ErkkiBotti extends PircBot {
-    
+    public static String kanava = "!studiopahaolo";
+   
 	Set<BottiModuuli> moduulit;
 	
     public ErkkiBotti() {
-    	
+    	this.setLogin("ErkkiHiippari43");
     	this.moduulit = new HashSet<BottiModuuli>();
-        this.setName("Erkki");
+        this.setName("ErkkixD");
         
         this.moduulit.add(new MalliModuuli(this));
         this.moduulit.add(new ReseptiModuuli(this));
+        this.moduulit.add(new Kuvavisa(this));
     }
     
     /**
