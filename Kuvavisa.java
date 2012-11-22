@@ -31,10 +31,10 @@ public class Kuvavisa extends BottiModuuli {
 		kuva.arvuutaKuva();
 	}
 	
-	public void printtaaPisteet(String nimi){
+	/*public void printtaaPisteet(String nimi){
 		
 		this.tilastot.get(nimi);
-	}
+	}*/
 	
 	/*public Kayttaja nimestaKayttaja(String hermanni){
 		
@@ -43,8 +43,8 @@ public class Kuvavisa extends BottiModuuli {
 		
 	}*/
 	
-	public void printtaaPisteet(){
-		
+	public void printtaaPisteet(String kanava){
+		botti.lahetaViesti(kanava, "Sori, taa ei toimi viela.");
 	}
 	
 	public String annaViimeisinViesti(){
@@ -55,12 +55,12 @@ public class Kuvavisa extends BottiModuuli {
             String login, String palvelinnimi, String viesti){
 		
 		this.viimeisinViesti = viesti;
-		if (viesti.equals("kuvavisa")){
+		if (viesti.equalsIgnoreCase("kuvavisa")){
 			aloitaArvuuttelu();
 			
 		}
-		if (viesti.equals("pisteet")){
-			printtaaPisteet();
+		if (viesti.equalsIgnoreCase("pisteet")){
+			printtaaPisteet(kanava);
 		}
 		
 		
