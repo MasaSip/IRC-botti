@@ -3,15 +3,15 @@ public class Rivi {
 
 	private boolean nakyvissa;
 	private String merkit;
-	private int riviNumero;
-	private Kuva kuva;
+	/*private int riviNumero;
+	private Kuva kuva;*/
 	
 	
 	public Rivi(int riviNumero, String merkit, Kuva kuva){
-		this.riviNumero = riviNumero;
+		//this.riviNumero = riviNumero;
 		this.merkit = merkit;
 		this.nakyvissa = false;
-		this.kuva = kuva;
+		//this.kuva = kuva;
 	}
 	
 	public Boolean onkoNakyvissa(){
@@ -32,7 +32,7 @@ public class Rivi {
 			asetaNakyvyys(true);
 			return merkit + "\n";
 		}else{
-			return "\n";
+			return ".\n";
 		}
 	}
 }
