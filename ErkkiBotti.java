@@ -15,9 +15,11 @@ import org.jibble.pircbot.*;
 
 
 public class ErkkiBotti extends PircBot {
-    public static String server = "irc.cs.hut.fi";
-	public static String kanava = "!pahaolo";
-    public static String login = "ErkkiHiippari43";
+    public static String server = "irc.freenode.net";
+    //public static String server = "irc.cs.hut.fi";
+	//public static String kanava = "!pahaolo";
+    public static String kanava = "#pahaolo";
+	public static String login = "ErkkiHiippari43";
     public static String nick = "ErkkixD1";
    
 	Set<BottiModuuli> moduulit;
