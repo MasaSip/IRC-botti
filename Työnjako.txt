@@ -1,10 +1,12 @@
-﻿Työnjako:
+Työnjako:
 
 
 Masa & Olli: fasilitoiniti
 
-Mikko & Atro: Arvaa ASCII
+Mikko & Atro & Viivi: Arvaa ASCII
 
 Eeva ja Lauri: Voit pyytää botilta ruokareseptin
 
 Ilona ja Henni: Mietelauseet (pyydettäessä botti antaa satunnaisen mietelauseen)
+
+Joel: wikinäsäviisas. Esim. jos botille sanoo kala, se tulostaa pätkän wikipedia-artikkelia kalasta
