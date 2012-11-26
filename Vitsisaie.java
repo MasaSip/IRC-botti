@@ -3,6 +3,7 @@ public class Vitsisaie implements Runnable{
 
 	private Kuvavisa visailu;
 	private Kuva kuva;
+	private String viimeisinViesti;
 
 
 
@@ -14,14 +15,16 @@ public class Vitsisaie implements Runnable{
 
 
 	public void run (){
-		String viesti = visailu.annaViimeisinViesti();
-		while(!kuva.oikeaVastaus(viesti)){
+		
+		viimeisinViesti = visailu.annaViimeisinViesti();
+		while(!kuva.oikeaVastaus(viimeisinViesti)){
 
 			while (!Thread.interrupted()){
-				viesti = visailu.annaViimeisinViesti();
+				viimeisinViesti = visailu.annaViimeisinViesti();
+				System.out.println(viimeisinViesti);
 
 				try{
-					Thread.sleep(10);
+					Thread.sleep(100);
 				}catch(InterruptedException ie){
 					System.out.println("Saie keskeytetty!");
 					break;
@@ -30,4 +33,6 @@ public class Vitsisaie implements Runnable{
 		}
 		System.out.println("JIPPIIIIIIII!!!!!");
 	}
+	
+	
 }

@@ -15,16 +15,16 @@ import org.jibble.pircbot.*;
 
 
 /*
- * Testailin kuvavistaa pe 23.11. sen jŠlkeen ku atro olit lŠhtenyt
- * freenode:n servulla tulosteita tuli yhtŠ tiuhaan kun eclepsen alalaitaan.
+ * Testailin kuvavistaa pe 23.11. sen jï¿½lkeen ku atro olit lï¿½htenyt
+ * freenode:n servulla tulosteita tuli yhtï¿½ tiuhaan kun eclepsen alalaitaan.
  * ilmeisesti Pric rajoitaa bottia silloin. Koulun servulle tulosteita
- * tuli vielŠ hitaammi. freenodelle tŠŠ botti tulosti BROFIST. Tulosti kuvan
- * nimen joka kerta uuelleen kun kuvasta paljastettiin enemmŠn.
+ * tuli vielï¿½ hitaammi. freenodelle tï¿½ï¿½ botti tulosti BROFIST. Tulosti kuvan
+ * nimen joka kerta uuelleen kun kuvasta paljastettiin enemmï¿½n.
  * 
- * Parannus vois olla esim. ettŠ tulostaa osan kuvaa ja kertoo odottavansa
+ * Parannus vois olla esim. ettï¿½ tulostaa osan kuvaa ja kertoo odottavansa
  * komentoa "lisaa" ennen kuin tulostaa lisaa. Kun komento annetaan, botti 
- * tulostaisi lopun kuvasta. SiinŠpŠhŠn yrittŠvŠt arvata mahd. nopeasti samalla
- * ku kuva valuu hitaasti nŠkyviin. NŠin jotta saatais visa nopeatempoisemmaksi
+ * tulostaisi lopun kuvasta. Siinï¿½pï¿½hï¿½n yrittï¿½vï¿½t arvata mahd. nopeasti samalla
+ * ku kuva valuu hitaasti nï¿½kyviin. Nï¿½in jotta saatais visa nopeatempoisemmaksi
  *
  *
  *
@@ -48,15 +48,13 @@ public class Kuvavisa extends BottiModuuli {
 	
 	public void aloitaArvuuttelu(){
 		
-		//if (kuvapankki != null){
-			
-		//}
-		//int arpa = rand.nextInt(kuvapankki.length);
-		int arpa = 0;
+		int arpa = rand.nextInt(kuvapankki.length);
+		//kint arpa = 0;
+		System.out.println(arpa);
 		String kuvanNimi = kuvapankki [arpa];
 		
 		Kuva kuva = lueKuva(kuvanNimi);
-		kuva.arvuutaKuva();
+		kuva.run();
 	}
 	
 	/*public void printtaaPisteet(String nimi){

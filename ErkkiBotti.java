@@ -20,7 +20,7 @@ public class ErkkiBotti extends PircBot {
 	//public static String kanava = "!pahaolo";
     public static String kanava = "#pahaolo";
 	public static String login = "ErkkiHiippari43";
-    public static String nick = "ErkkixD1";
+    public static String nick = "ErkkixD2";
    
 	Set<BottiModuuli> moduulit;
 	
