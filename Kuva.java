@@ -22,6 +22,20 @@ public class Kuva  implements Runnable{
 
 
 	}
+	
+	public String annaNimi(){
+		
+		return nimi;
+	}
+	
+	public int annaRivienKoko(){
+		return riveja.size();
+	}
+	
+	public Rivi annaRivi(int riviNro){
+		
+		return riveja.get(riviNro);
+	}
 
 	public void asetaRivienNakyvyys(Boolean nakyvyys){
 
@@ -33,10 +47,6 @@ public class Kuva  implements Runnable{
 
 	public int arvanArpominen(){
 
-		// TAA ON VAARIN
-		//System.out.println(nakymattomatRivit.size());
-		//int arpa = rand.nextInt(nakymattomatRivit.size());
-		//	nakymattomatRivit.remove(arpa);
 		int arpa = rand.nextInt(this.riveja.size());
 
 		if (this.riveja.get(arpa).onkoNakyvissa() == true ){
@@ -55,54 +65,19 @@ public class Kuva  implements Runnable{
 	}
 
 	public void run() {
-		//        if (this.oikeaVastaus(this.visailu.annaViimeisinViesti())){
-		Thread vitsi = new Thread(new Vitsisaie(this.visailu, this));
-		Thread kuva = new Thread();
-		kuva.start();
-		vitsi.start();
-		asetaRivienNakyvyys(false);
-
-		while (!oikeaVastaus(visailu.annaViimeisinViesti()) && nakymattomatRivit.size() >  1){
-
-			// Nukkuu 10 sek
-			//			Timer timer = new Timer();
-			//			timer.setDelay(100000);
-			//			timer.start(); 
-			//			this.sleep();
 
 
-
-			System.out.println(nakymattomatRivit.size());
-			int arpa = arvanArpominen();
-			Rivi rivi = riveja.get(arpa);
-			visailu.botti.lahetaViesti(visailu.annaKanava(), Integer.toString(arpa)); // TESTIA VARTEN
-			rivi.asetaNakyvyys(true);
-			for (int i = 0; i < riveja.size(); i++){
-
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				// nukkuu 1 sek
-				rivi = riveja.get(i);
-				visailu.botti.lahetaViesti(visailu.annaKanava(),  rivi.printtaa());
-			}
-			visailu.botti.lahetaViesti(visailu.annaKanava(), "############################");
-			visailu.botti.lahetaViesti(visailu.annaKanava(), "############################");
-			try{
-				Thread.sleep(10000);
-			}
-			catch(InterruptedException ex){
-
-			}
-		}
-
+	}
+	
+	public int annaNakymattomienKoko(){
+		
+		return nakymattomatRivit.size();
 	}
 
 	public void arvuutaKuva(){
-
-
+		
+		Thread tarkistus = new Thread (new Tarkistussaie(this.visailu, this));
+		tarkistus.start();
 
 	}
 

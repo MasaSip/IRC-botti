@@ -20,8 +20,10 @@ public class Vitsisaie implements Runnable{
 		while(!kuva.oikeaVastaus(viimeisinViesti)){
 
 			while (!Thread.interrupted()){
+				
+				visailu.paivitaViesti();
 				viimeisinViesti = visailu.annaViimeisinViesti();
-				System.out.println(viimeisinViesti);
+				//System.out.println(viimeisinViesti);
 
 				try{
 					Thread.sleep(100);

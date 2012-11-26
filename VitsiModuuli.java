@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class VitsiModuuli extends BottiModuuli {
 	private static Random random = new Random();
-	private static ArrayList <String> vitsit;
+	private ArrayList <String> vitsit;
 
 
 	public VitsiModuuli(ErkkiBotti botti){

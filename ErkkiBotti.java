@@ -21,7 +21,8 @@ public class ErkkiBotti extends PircBot {
     public static String kanava = "#pahaolo";
 	public static String login = "ErkkiHiippari43";
     public static String nick = "ErkkixD5";
-   
+    public String viimeisinViesti;
+    public String viimeisinLahettaja;
 	Set<BottiModuuli> moduulit;
 	
     public ErkkiBotti() {
@@ -43,7 +44,8 @@ public class ErkkiBotti extends PircBot {
     public void onMessage(String channel, String sender,
                        String login, String hostname, String message)
     {
-    	
+    	this.viimeisinLahettaja = sender;
+    	this.viimeisinViesti = message;
     	for (BottiModuuli mod : moduulit) {
     		mod.viesti(channel, sender, login, hostname, message);
     	}
