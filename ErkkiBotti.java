@@ -5,11 +5,15 @@ import java.util.Set;
 import org.jibble.pircbot.*;
 
 /**
+ * Rakkaan erkki-bottin toiminnallisuudet:
+ * 
+ * 
+ * 
+ * 
  * 
  * @author OLO3
  *
  */
-
 
 
 
@@ -35,6 +39,8 @@ public class ErkkiBotti extends PircBot {
         this.moduulit.add(new Kuvavisa(this));
         this.moduulit.add(new MietelauseModuuli(this));
         this.moduulit.add(new VitsiModuuli(this));
+        this.moduulit.add(new VastausModuuli(this));
+        this.moduulit.add(new ApuaModuuli(this));
     }
     
     /**
