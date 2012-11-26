@@ -62,7 +62,9 @@ public class MietelauseModuuli extends BottiModuuli {
 			for(int i = 0; i < kohderivi; i++){ 
 				System.out.println(kohderivi);
 			}
+			botti.lahetaViesti(kanava, lahettaja + mietelauseet.get(kohderivi));
 		}
+
 	}
 
 
