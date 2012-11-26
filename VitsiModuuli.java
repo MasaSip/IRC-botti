@@ -62,6 +62,7 @@ public class VitsiModuuli extends BottiModuuli {
 			for(int i = 0; i < kohderivi; i++){ 
 				System.out.println(kohderivi);
 			}
+			botti.lahetaViesti(kanava, mietelauseet.get(kohderivi));
 		}
 	}
 	/*public static void main(String[] args){
