@@ -39,7 +39,7 @@ public class VastausModuuli extends BottiModuuli {
 			}
 
 			if (sana.equalsIgnoreCase("motivaatiovalas")) {
-				botti.lahetaViesti(kanava, "http://lannistajakuha.com/" + "...");
+				botti.lahetaViesti(kanava, "... http://lannistajakuha.com/ ...");
 				break;
 			}
 
@@ -47,7 +47,7 @@ public class VastausModuuli extends BottiModuuli {
 				double arpa = rand.nextDouble(); 				
 				for (int j = 0; j < sanataulukko.length; j++) {
 					String sana2 = sanataulukko[j];
-					if (sana2.equalsIgnoreCase("mitä") 
+					if (sana2.equalsIgnoreCase("mitÃ¤") 
 							|| sana2.equalsIgnoreCase("miten")) {
 						if (arpa < 0.3) {						
 							botti.lahetaViesti(kanava, 
@@ -74,11 +74,11 @@ public class VastausModuuli extends BottiModuuli {
 				}
 
 			}
-			if (sana.equalsIgnoreCase("sää")) {
+			if (sana.equalsIgnoreCase("sÃ¤Ã¤")) {
 				for (int j = 0; j < sanataulukko.length; j++) {
 					String sana2 = sanataulukko[j];
 					if (sana2.equalsIgnoreCase("millainen") 
-							|| sana2.equalsIgnoreCase("mikä")
+							|| sana2.equalsIgnoreCase("mikÃ¤")
 							|| sana2.equalsIgnoreCase("onko")) { 
 						double arpa = rand.nextDouble();
 						if (arpa < 0.2) {
@@ -113,7 +113,6 @@ public class VastausModuuli extends BottiModuuli {
 							botti.lahetaViesti(kanava, "Aurinko paistaa! " +
 									"Hellettä luvassa huomennakin! :)");
 						}
-						break;
 					}
 				}
 			}

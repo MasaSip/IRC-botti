@@ -11,11 +11,11 @@ public class ReseptiModuuli extends BottiModuuli {
 			String palvelinnimi, String viesti) {
 
 
-		if (viesti.startsWith("mita tanaan syotaisiin?")) {
+		if (viesti.startsWith("mitä tänään syötäisiin?")) {
 			String[] sanataulukko = viesti.split(" ");
 			if (sanataulukko.length == 4) {
 				String hakusana = sanataulukko[3];
-				botti.lahetaViesti(kanava, lahettaja + "Resepteja loytyy osoitteesta " 
+				botti.lahetaViesti(kanava, "Resepteja loytyy osoitteesta " 
 						+ "http://www.pirkka.fi/ruoka/reseptihaku?keys=" + 
 						hakusana);
 			}
