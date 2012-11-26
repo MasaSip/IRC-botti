@@ -30,7 +30,7 @@ public class MietelauseModuuli extends BottiModuuli {
 		try{
 			//stream = new FileInputStream("/Users/hkk/Documents/workspace/IRKKIBOTTI/bin/Erkkibotin_mietelauseet.txt");
 			stream = new FileInputStream("Erkkibotin_mietelauseet.txt");
-			
+
 			reader = new BufferedReader(new InputStreamReader(stream));
 
 			String rivi = reader.readLine();
@@ -60,18 +60,17 @@ public class MietelauseModuuli extends BottiModuuli {
 		if(viesti.equals("mietelause")){
 			int kohderivi = this.random.nextInt(this.mietelauseet.size());
 			for(int i = 0; i < kohderivi; i++){ 
-					System.out.println(kohderivi);
+				System.out.println(kohderivi);
 			}
 		}
 	}
-	
 
-	public static void main(String[] args){
+
+	/*public static void main(String[] args){
 		MietelauseModuuli mlm = new MietelauseModuuli(null);
 		System.out.println(mietelauseet.get(100));
 	}
-
-
+	 */
 
 
 
