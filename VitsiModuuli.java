@@ -59,9 +59,8 @@ public class VitsiModuuli extends BottiModuuli {
 
 		if(viesti.equals("vitsi")){
 			int kohderivi = this.random.nextInt(this.vitsit.size());
-			for(int i = 0; i < kohderivi; i++){ 
-				System.out.println(kohderivi);
-			}
+			
+			botti.lahetaViesti(kanava, vitsit.get(kohderivi));
 		}
 	}
 	/*public static void main(String[] args){

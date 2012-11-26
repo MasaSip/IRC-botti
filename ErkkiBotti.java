@@ -5,11 +5,43 @@ import java.util.Set;
 import org.jibble.pircbot.*;
 
 /**
+ * Mikäli botin käynnistää eclipsestä, tekstitiedostojen tulee olla 
+ * projektikansiossa. Komentoriviltä ajettaessa niiden tulee olla samassa 
+ * kansiossa ErkkiMain.java kanssa
+ * 
  * Rakkaan erkki-bottin toiminnallisuudet:
+ * (lainaus merkeissä komennot, joihin reagoi)
  * 
+ * MalliModuuli:
+ * "time"
  * 
+ * ReseptiModuuli:
+ * "mitä tänään syötäisiin? tähänJokuRuoka"
+ * "ruoka tähänJokuRuoka"
  * 
+ * Kuvavisa:
+ * "kuvavisa" Visailu keskeytyy, mikäli joku kirjoittaa irkkiin oikean 
+ * vastauksen.
  * 
+ * MietelauseModuuli:
+ * "mietelause" 
+ * 
+ * VitsiModuuli:
+ * "vitsi" 
+ * 
+ * VastausModuuli:
+ * "moi", "moi erkki", "onko sää"
+ * 
+ * ApuaModuuli:
+ * merkki jonot joissa esiintyy sanat: "erkki" ja "apua"
+ * 
+ * irc.cs.hut.fi serverillä erkkin kuvavisa saattaa reagoida viiveellä 
+ * arvauksiin.
+ * 
+ * Mietelauseet tulostuvat hassuilla merkeillä vaikka tekstitiedostossa ei ole
+ * ääkkösiä ollenkaan.
+ * 
+ * ErkkiBotti -luokan alussa valitaan attribuutteihin kanava, nickki ja servu 
  * 
  * @author OLO3
  *
@@ -19,12 +51,12 @@ import org.jibble.pircbot.*;
 
 
 public class ErkkiBotti extends PircBot {
-    public static String server = "irc.freenode.net";
-    //public static String server = "irc.cs.hut.fi";
-	//public static String kanava = "!pahaolo";
-    public static String kanava = "#pahaolo";
-	public static String login = "ErkkiHiippari43";
-    public static String nick = "ErkkixD5";
+    //public static String server = "irc.freenode.net";
+    public static String server = "irc.cs.hut.fi";
+	public static String kanava = "!pahaolo";
+    //public static String kanava = "#pahaolo";
+	public static String login = "Erkki";
+    public static String nick = "ErkkixD";
     public String viimeisinViesti;
     public String viimeisinLahettaja;
 	Set<BottiModuuli> moduulit;
