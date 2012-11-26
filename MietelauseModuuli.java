@@ -40,7 +40,7 @@ public class MietelauseModuuli extends BottiModuuli {
 			}
 		}
 		catch(FileNotFoundException e){
-			System.out.println("Tiedostoa ei lšytynyt.");
+			System.out.println("Tiedostoa ei lï¿½ytynyt.");
 		}
 		catch(IOException e){
 		}
@@ -62,7 +62,7 @@ public class MietelauseModuuli extends BottiModuuli {
 			for(int i = 0; i < kohderivi; i++){ 
 				System.out.println(kohderivi);
 			}
-			botti.lahetaViesti(kanava, lahettaja + mietelauseet.get(kohderivi));
+			botti.lahetaViesti(kanava, mietelauseet.get(kohderivi));
 		}
 
 	}
