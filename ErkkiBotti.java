@@ -33,6 +33,7 @@ public class ErkkiBotti extends PircBot {
         this.moduulit.add(new ReseptiModuuli(this));
         this.moduulit.add(new Kuvavisa(this));
         this.moduulit.add(new MietelauseModuuli(this));
+        this.moduulit.add(new VitsiModuuli(this));
     }
     
     /**
