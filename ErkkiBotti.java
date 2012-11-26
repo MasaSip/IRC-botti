@@ -20,7 +20,7 @@ public class ErkkiBotti extends PircBot {
 	//public static String kanava = "!pahaolo";
     public static String kanava = "#pahaolo";
 	public static String login = "ErkkiHiippari43";
-    public static String nick = "ErkkixD2";
+    public static String nick = "ErkkixD5";
    
 	Set<BottiModuuli> moduulit;
 	
@@ -32,6 +32,7 @@ public class ErkkiBotti extends PircBot {
         this.moduulit.add(new MalliModuuli(this));
         this.moduulit.add(new ReseptiModuuli(this));
         this.moduulit.add(new Kuvavisa(this));
+        this.moduulit.add(new MietelauseModuuli(this));
     }
     
     /**

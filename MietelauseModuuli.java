@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class MietelauseModuuli extends BottiModuuli {
 	private static Random random = new Random();
-	private static ArrayList <String> mietelauseet;
+	private ArrayList <String> mietelauseet;
 
 
 	public MietelauseModuuli(ErkkiBotti botti){
